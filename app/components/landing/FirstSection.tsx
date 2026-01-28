@@ -1,5 +1,6 @@
 import IntroDesktop from "@assets/bg-intro-desktop.svg";
 import Mockup from "@assets/image-mockups.png";
+import IntroMobile from "@assets/bg-intro-mobile.svg";
 import Image from "next/image";
 const FirstSection = () => {
   return (
@@ -21,15 +22,22 @@ const FirstSection = () => {
       {/* 배경 + 목업 */}
       <Image
         src={IntroDesktop}
-        alt="배경 목업 이미지"
-        className="absolute -top-69 -right-110"
+        alt="데스크탑 배경 목업 이미지"
+        className="absolute hidden md:scale-100 md:-top-69 md:-right-110"
+        priority
+      />
+
+      <Image
+        src={IntroMobile}
+        alt="모바일 배경 목업 이미지"
+        className="absolute -top-10 right-0 md:hidden"
         priority
       />
 
       <Image
         src={Mockup}
         alt="배경 핸드폰 이미지"
-        className="absolute -top-40 -right-32"
+        className="absolute -top-34 md:-top-40 md:-right-32"
         priority
       />
     </section>
