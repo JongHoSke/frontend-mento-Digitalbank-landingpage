@@ -1,9 +1,16 @@
+import Card from "../card/Card";
+import { Third_Card_List } from "@/app/assets/data/cardDatas";
+
 const ThirdSection = () => {
   return (
     <>
       <section>
         <h2>Latest Articles</h2>
-        <article>카드 컴포넌트</article>
+        <div>
+          {Third_Card_List.map((item) => {
+            return <Card key={item.id} {...item} variant="image" />;
+          })}
+        </div>
       </section>
     </>
   );
