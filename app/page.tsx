@@ -5,7 +5,7 @@ import SecondSection from "@components/landing/SecondSection";
 import ThirdSection from "@components/landing/ThirdSection";
 export default function Home() {
   return (
-    <main className="flex-auto justify-center text-center">
+    <main className="flex-auto justify-center ">
       <section>
         <FirstSection />
         <SecondSection />

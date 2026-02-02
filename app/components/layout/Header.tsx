@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Hamburger from "@assets/icon-hamburger.svg";
 import Close from "@assets/icon-close.svg";
+import InviteButton from "@components/button/InviteButton";
 import { useState } from "react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,13 +37,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      {/* 더보기 버튼 */}
-      <div className="hidden md:flex group relative  m-3 w-50 h-12 justify-center bg-linear-to-bl from-green-400 from-30% to-cyan-300 rounded-4xl cursor-pointer">
-        <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity" />
-        <button className="cursor-pointer text-white font-bold ">
-          Request Invite
-        </button>
-      </div>
+      <InviteButton className="hidden md:flex m-3 w-50 h-12" />
 
       {/* 네비게이션 탭 mobile */}
       <button className="visible md:hidden">
