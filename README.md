@@ -12,6 +12,8 @@ Styling: Tailwind CSS
 
 Deployment: Vercel
 
+---
+
 ✨ Key Features & Focus
 
 1. 시멘틱 태그 기반의 마크업
@@ -25,4 +27,4 @@ Deployment: Vercel
 3. 재사용 가능한 컴포넌트 설계
    Button, Car 등 반복되는 UI를 독립적인 컴포넌트로 분리하여 유지보수성을 높였습니다.
 
-TypeScript의 Interface를 활용해 Props의 타입을 엄격하게 관리하여 런타임 에러를 방지했습니다.
+4. TypeScript의 Interface를 활용해 Props의 타입을 엄격하게 관리하여 런타임 에러를 방지했습니다.
