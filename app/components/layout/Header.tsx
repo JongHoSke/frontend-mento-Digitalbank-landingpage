@@ -16,7 +16,7 @@ const Header = () => {
     <header className="flex justify-between px-5 md:justify-around md:px-0 h-18 relative bg-white z-100">
       {/* 로고 이미지 */}
       <Link href={"/"} className="logo flex justify-center">
-        <Image src={LogoDark} alt="로고 이미지" />
+        <Image src={LogoDark} alt="다크 로고" />
       </Link>
 
       {/* 네비게이션 탭 pc */}

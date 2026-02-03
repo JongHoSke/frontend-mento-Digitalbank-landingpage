@@ -13,7 +13,7 @@ const InviteButton = ({ className }: InviteButtonProps) => {
         className,
       )}
     >
-      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity" />
+      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 rounded-4xl transition-opacity" />
       <button className="cursor-pointer text-white font-bold ">
         Request Invite
       </button>
