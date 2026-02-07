@@ -1,11 +1,26 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  //  정적 배포 필수
+  output: "export",
+
+  //  next/image 정적 배포용
+  images: {
+    unoptimized: true,
+  },
+
+  //  Turbopack vs webpack 충돌 방지
+  turbopack: {},
+
   webpack(config) {
     // 기존의 SVG 룰을 찾아서 해당 파일들이 SVGR을 통과하도록 설정
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg"),
     );
+
+    if (!fileLoaderRule) {
+      return config;
+    }
 
     config.module.rules.push(
       // 기존 룰에서 svg 제외

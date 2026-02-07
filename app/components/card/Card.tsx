@@ -29,7 +29,7 @@ const CardComponent = ({
       <div className={`${isIcon ? "" : "bg-white p-8"}`}>
         {tag && (
           <span
-            className={`${isIcon ? "" : "block text-sm md:text-lx text-gray-600 mb-5"}`}
+            className={`${isIcon ? "" : "block text-sm md:text-xl text-gray-600 mb-5"}`}
           >
             {tag}
           </span>
