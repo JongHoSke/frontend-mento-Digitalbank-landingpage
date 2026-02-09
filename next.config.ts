@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
+import type { RuleSetRule } from "webpack";
+
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   //  정적 배포 필수
-  output: "export",
+  output: isProd ? "export" : undefined,
+
+  basePath: isProd ? "/digitalbank-static" : "",
+  assetPrefix: isProd ? "/digitalbank-static/" : "",
 
   //  next/image 정적 배포용
   images: {
@@ -14,8 +20,9 @@ const nextConfig: NextConfig = {
 
   webpack(config) {
     // 기존의 SVG 룰을 찾아서 해당 파일들이 SVGR을 통과하도록 설정
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg"),
+    const fileLoaderRule = config.module.rules.find(
+      (rule: RuleSetRule) =>
+        rule.test instanceof RegExp && rule.test.test(".svg"),
     );
 
     if (!fileLoaderRule) {

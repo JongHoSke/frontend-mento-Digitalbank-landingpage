@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 const PostsLayout = ({ children }: Props) => {
   return <>{children}</>;
