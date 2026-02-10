@@ -31,7 +31,8 @@ Deployment: Vercel
 
 
 ---
+정적 배포 링크 : https://jonghoske.github.io/digitalbank-static/
 
 <img width="1920" height="2412" alt="landingImage" src="https://github.com/user-attachments/assets/72ede21e-03fb-4b1c-9242-37ac63b773ac" />
 
-정적 배포 링크 : https://jonghoske.github.io/digitalbank-static/
+
