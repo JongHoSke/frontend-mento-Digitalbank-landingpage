@@ -30,4 +30,9 @@ Deployment: Vercel
 4. TypeScript의 Interface를 활용해 Props의 타입을 엄격하게 관리하여 런타임 에러를 방지했습니다.
 
 
+
+---
+
+![Uploading landingImage.png…]()
+
 정적 배포 링크 : https://jonghoske.github.io/digitalbank-static/
